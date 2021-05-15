@@ -37,9 +37,10 @@ TriggerEvent('esx_society:registerSociety', 'tabac', 'Tabac', 'society_tabac', '
 -------------- Récupération de Tabac blond -------------
 local function Harvest(source)
 
-  SetTimeout(500, function()
+  SetTimeout(1500, function()
 
     if PlayersHarvesting[source] == true then
+
 
       local xPlayer  = ESX.GetPlayerFromId(source)
       local TabacBlondQuantity = xPlayer.getInventoryItem('tabacblond').count
