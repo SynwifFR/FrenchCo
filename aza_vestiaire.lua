@@ -100,39 +100,7 @@ Citizen.CreateThread(function()
     end
 end)
 
-function vpolice()
-                local model = GetEntityModel(GetPlayerPed(-1))
-                TriggerEvent('skinchanger:getSkin', function(skin)
-                    if model == GetHashKey("mp_m_freemode_01") then
-                        clothesSkin = {
-                            ['bags_1'] = 0, ['bags_2'] = 0,
-                            ['tshirt_1'] = 39, ['tshirt_2'] = 0,
-                            ['torso_1'] = 55, ['torso_2'] = 0,
-                            ['arms'] = 30,
-                            ['pants_1'] = 46, ['pants_2'] = 0,
-                            ['shoes_1'] =25, ['shoes_2'] = 0,
-                            ['mask_1'] = 0, ['mask_2'] = 0,
-                            ['bproof_1'] = 0,
-                            ['chain_1'] = 0,
-                            ['helmet_1'] = -1, ['helmet_2'] = 0,
-                        }
-                    else
-                        clothesSkin = {
-                            ['bags_1'] = 0, ['bags_2'] = 0,
-                            ['tshirt_1'] = 15,['tshirt_2'] = 2,
-                            ['torso_1'] = 65, ['torso_2'] = 2,
-                            ['arms'] = 36, ['arms_2'] = 0,
-                            ['pants_1'] = 38, ['pants_2'] = 2,
-                            ['shoes_1'] = 12, ['shoes_2'] = 6,
-                            ['mask_1'] = 0, ['mask_2'] = 0,
-                            ['bproof_1'] = 0,
-                            ['chain_1'] = 0,
-                            ['helmet_1'] = -1, ['helmet_2'] = 0,
-                        }
-                    end
-                    TriggerEvent('skinchanger:loadClothes', skin, clothesSkin)
-                end)
-            end
+
 
             function travail()
                 local model = GetEntityModel(GetPlayerPed(-1))
